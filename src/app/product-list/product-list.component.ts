@@ -12,6 +12,7 @@ export class ProductListComponent {
 
   share(x) {
     window.alert('The product has been shared! '+x);
+    this.conta++;
   }
 
   onNotify(nome){
