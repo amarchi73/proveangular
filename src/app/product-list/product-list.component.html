@@ -1,0 +1,16 @@
+<h2>Products</h2>
+{{conta}}
+<div *ngFor="let product of products">
+  <h3>
+    {{ product.name }}
+  </h3>
+
+  <app-prod-child [nome]="product.name" (notify)="onNotify(product.name)" #son></app-prod-child>
+
+  <button (click)="share(son.segreto)">Share {{son.segreto}}</button>
+</div>
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
